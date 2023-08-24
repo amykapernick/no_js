@@ -1,0 +1,56 @@
+body {
+	color: var(--neutral);
+	font-family: var(--font_main);
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+a {
+	color: var(--purple_bright);
+	font-weight: bolder;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+pre, code {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 400;
+}
+
+pre {
+	padding: 10px 20px;
+	border-radius: 10px ;
+	background: var(--neutral_light_90);
+	color: var(--background);
+}
+
+h1, h2, h3 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h1, h2 {
+	color: var(--purple_bright);
+}
+
+h3 {
+	color: var(--navy);
+}
+
+h1, h2, h3, h4, h5 {
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

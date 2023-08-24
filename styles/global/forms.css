@@ -1,0 +1,279 @@
+form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 20px;
+	background: var(--background);
+	text-align: left;
+
+	@media(min-width: 40em) {
+		margin: 0 auto;
+		padding: 50px;
+	}
+
+	@media(min-width: 60em) {
+		padding: 100px;
+		border-width: 10px;
+	}
+}
+
+label, legend {
+	display: block;
+	min-width: 100px;
+	margin: 40px 0 16px;
+	font-family: var(--font_main);
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+
+	&[required] {
+		&:after {
+			content: '*';
+			margin-left: 1ch;
+		}
+	}
+
+	@media(min-width: 60em) {
+		min-width: 120px;
+	}
+}
+
+legend {
+	width: 100%;
+}
+
+input, textarea, select {
+	display: block;
+	flex: 1 1 100%;
+	margin: 0;
+	padding: 5px 25px;
+	border: 2px solid rgba(var(--purple_bright), 0.4);
+	background: rgba(var(--purple_bright), 0.4);
+	color: var(--neutral);
+	font-size: 1em;
+
+	&::placeholder {
+		color: #0d0d0d;
+		font-style: italic;
+	}
+
+	&:invalid {
+		box-shadow: none;
+
+		&:focus {
+			border-color: var(--orange);
+		}
+	}
+
+	&:valid {
+		&[required] {
+			border-color: var(--green);
+		}
+	}
+}
+
+textarea {
+	flex-basis: 100%;
+	min-height: 8em;
+	margin-top: 0;
+	padding: 15px 25px;
+}
+
+fieldset {
+	width: 100%;
+	padding: 0;
+	border: none;
+
+	
+}
+
+button {
+	margin-top: 40px;
+	padding: 0.6em 1em 0.5em;
+	border: none;
+	border: 4px solid var(--purple_bright);
+	background: var(--purple_bright);
+	color: #ffffff;
+	font-size: 1.25em;
+	font-weight: 700;
+	line-height: 1;
+	text-transform: uppercase;
+
+	&:hover {
+		border-color: var(--purple_bright);
+		background: #ffffff;
+		color: var(--purple_bright);
+	}
+
+	@media(min-width: 60em) {
+		margin-top: 80px;
+	}
+}
+
+input {
+	&[type='password'] {
+		&::-ms-reveal {
+			display: none;
+		}
+	}
+
+	&[type='checkbox'], &[type='radio'] {
+		position: absolute;
+		z-index: -100;
+		opacity: 0;
+
+		& + label {
+			display: flex;
+			position: relative;
+			align-items: center;
+			width: 100%;
+			margin: 26px 10px;
+			font-style: italic;
+			font-weight: 400;
+			text-transform: none;
+			cursor: pointer;
+
+			&:before, &:after {
+				display: block;
+				flex: 0 0 auto;
+			}
+
+			&:before {
+				content: '';
+				width: 20px;
+				height: 20px;
+				margin-right: 1ch;
+				border: 2px solid var(--purple_bright);
+				background: var(--purple_bright);
+			}
+
+			&:after {
+				position: absolute;
+				left: 3px;
+				color: var(--neutral);
+				font-size: 1.3em;
+			}
+
+			@media(min-width: 60em) {
+				&:before {
+					width: 25px;
+					height: 25px;
+				}
+			}
+
+			@media(min-width: 90em) {
+				&:after {
+					font-size: 1.1em;
+				}
+			}
+		}
+
+		&:checked {
+			+ label {
+				&:after {
+					content: '';
+				}
+			}
+		}
+
+		&:focus {
+			& + label {
+				outline: 3px solid var(--yellow);
+			}
+		}
+
+		&[value='other'] {
+			& + label {
+				& + input[type='text'] {
+					display: none;
+				}
+			}
+
+			&:checked {
+				& + label {
+					flex: 0 0 auto;
+					width: auto;
+
+					& + input[type='text'] {
+						display: block;
+						flex-basis: auto;
+						align-self: center;
+					}
+				}
+			}
+		}
+	}
+
+	&[type='checkbox'] {
+		&:checked {
+			& + label {
+				&:after {
+					content: '✓';
+				}
+			}
+		}
+	}
+
+	&[type='radio'] {
+		& + label {
+			&:before, &:after {
+				border-radius: 50%;
+			}
+
+			&:after {
+				left: 2.5px;
+				width: 14px;
+				height: 14px;
+				background: #ffffff;
+			}
+
+			@media(min-width: 60em) {
+				&:after {
+					left: 5px;
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
+	}
+
+	&[type='range'] {
+		padding: 0;
+		border: none;
+		background: none;
+		accent-color: var(--purple_bright);
+
+		&::-webkit-slider-thumb, &::-moz-range-thumb, &::-ms-thumb {
+			width: 20px;
+			height: 20px;
+			margin: 0;
+			border: none;
+			border-radius: 50%;
+			background: var(--purple_bright);
+			color: var(--purple_bright);
+			cursor: pointer;
+			-webkit-appearance: none;
+			appearance: none;
+		}
+
+		&::-moz-range-progress, &::-ms-fill-upper, &::-ms-fill-lower {
+			width: 100%;
+			height: 10px;
+			border: none;
+			border-radius: 20px;
+			background: var(--purple_bright);
+			cursor: pointer;
+		}
+
+		&::-moz-range-track, &::-ms-track, &::-webkit-slider-runnable-track {
+			width: 100%;
+			height: 10px;
+			border: none;
+			border-radius: 20px;
+			background: var(--neutral_light_10);
+			cursor: pointer;
+		}
+	}
+}
+
+

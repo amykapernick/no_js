@@ -1,0 +1,69 @@
+body, *::before, *::after {
+	--background: #f7f0eb;
+	--purple_bright: #9440a0;
+	--purple: #7561c1;
+	--navy: #364c93;
+	--blue: #318ce7;
+	--green: #64ad66;
+	--red: #e53f51;
+	--pink: #cb5699;
+	--orange: #f78d2b;
+	--yellow: #ffce03;
+	--white: #ffffff;
+	--black: #000000;
+	--neutral: var(--black);
+	--font_main: Montserrat, sans-serif;
+	--font_code: 'Source Code Pro', monospace;
+
+
+	/* https://angel-rs.github.io/css-color-filter-generator/ */
+	--filter_purple_bright: brightness(0) saturate(100%) invert(28%) sepia(43%) saturate(1913%) hue-rotate(261deg) brightness(97%) contrast(85%);
+	--filter_purple: brightness(0) saturate(100%) invert(39%) sepia(26%) saturate(1198%) hue-rotate(212deg) brightness(102%) contrast(88%);
+	--filter_navy: brightness(0) saturate(100%) invert(23%) sepia(73%) saturate(991%) hue-rotate(199deg) brightness(96%) contrast(86%);
+	--filter_blue: brightness(0) saturate(100%) invert(50%) sepia(18%) saturate(4574%) hue-rotate(189deg) brightness(93%) contrast(94%);
+	--filter_green: brightness(0) saturate(100%) invert(55%) sepia(59%) saturate(333%) hue-rotate(72deg) brightness(98%) contrast(86%);
+	--filter_red: brightness(0) saturate(100%) invert(28%) sepia(27%) saturate(7002%) hue-rotate(338deg) brightness(104%) contrast(80%);
+	--filter_pink: brightness(0) saturate(100%) invert(50%) sepia(96%) saturate(537%) hue-rotate(288deg) brightness(82%) contrast(91%);
+	--filter_orange: brightness(0) saturate(100%) invert(65%) sepia(18%) saturate(3878%) hue-rotate(341deg) brightness(101%) contrast(94%);
+	--filter_yellow: brightness(0) saturate(100%) invert(76%) sepia(68%) saturate(3537%) hue-rotate(4deg) brightness(117%) contrast(111%);
+	--filter_white: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(346deg) brightness(101%) contrast(104%);
+	--filter_black: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(22deg) brightness(103%) contrast(103%);
+	--filter_neutral: var(--filter_black);
+
+
+	@media(prefers-color-scheme: light) {
+		--purple_bright: #84398F;
+		--purple: #5B45AF;
+		--blue: #1976D4;
+		--green: #437E45;
+		--red: #AD1728;
+		--pink: #A0276C;
+		--orange: #BB5C04;
+		--yellow: #8C7506;
+
+		--filter_purple_bright: brightness(0) saturate(100%) invert(28%) sepia(71%) saturate(663%) hue-rotate(248deg) brightness(91%) contrast(95%);
+		--filter_purple: brightness(0) saturate(100%) invert(32%) sepia(14%) saturate(4114%) hue-rotate(221deg) brightness(91%) contrast(96%);
+		--filter_blue: brightness(0) saturate(100%) invert(31%) sepia(79%) saturate(2783%) hue-rotate(197deg) brightness(93%) contrast(81%);
+		--filter_green: brightness(0) saturate(100%) invert(43%) sepia(12%) saturate(1694%) hue-rotate(72deg) brightness(96%) contrast(87%);
+		--filter_red: brightness(0) saturate(100%) invert(11%) sepia(95%) saturate(4327%) hue-rotate(346deg) brightness(90%) contrast(90%);
+		--filter_pink: brightness(0) saturate(100%) invert(22%) sepia(37%) saturate(3262%) hue-rotate(297deg) brightness(94%) contrast(95%);
+		--filter_orange: brightness(0) saturate(100%) invert(39%) sepia(43%) saturate(1501%) hue-rotate(358deg) brightness(94%) contrast(100%);
+		--filter_yellow: brightness(0) saturate(100%) invert(41%) sepia(89%) saturate(3879%) hue-rotate(42deg) brightness(97%) contrast(95%);
+	}
+
+	@media(prefers-color-scheme: dark) {
+		--purple_bright: #CE76DB;
+		--purple: #9B8ADC;
+		--navy: #7294FA;
+		--blue: #4A9AEA;
+		--red: #FF697C;
+		--pink: #D976AF;
+
+		--filter_purple_bright: brightness(0) saturate(100%) invert(61%) sepia(50%) saturate(1007%) hue-rotate(228deg) brightness(89%) contrast(91%);
+		--filter_purple: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(4709%) hue-rotate(206deg) brightness(92%) contrast(85%);
+		--filter_navy: brightness(0) saturate(100%) invert(60%) sepia(84%) saturate(3082%) hue-rotate(203deg) brightness(104%) contrast(96%);
+		--filter_blue: brightness(0) saturate(100%) invert(65%) sepia(73%) saturate(3581%) hue-rotate(187deg) brightness(96%) contrast(91%);
+		--filter_red: brightness(0) saturate(100%) invert(51%) sepia(77%) saturate(996%) hue-rotate(313deg) brightness(102%) contrast(101%);
+		--filter_pink: brightness(0) saturate(100%) invert(83%) sepia(16%) saturate(5958%) hue-rotate(285deg) brightness(89%) contrast(91%);
+	}
+}
