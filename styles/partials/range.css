@@ -1,0 +1,68 @@
+form {
+	& input[type="range"] {
+		margin: 0 auto;
+		padding: 0;
+		flex-basis: auto;
+		flex-grow: 0;
+		border: none;
+		background: none;
+
+		& + datalist {
+			width: 100%;
+			font-size: .6em;
+			white-space: break-spaces;
+			overflow-wrap: break-word;
+
+			& option {
+				display: block;
+				width: 100%;
+				max-width: 100%;
+				margin: 10px 0 0;
+				padding: 0;
+				text-align: center;
+				white-space: pre-wrap;
+
+				&:nth-child(1) {
+					--column: 1;
+				}
+
+				&:nth-child(2) {
+					--column: 3;
+				}
+
+				&:nth-child(3) {
+					--column: 5;
+				}
+				
+				&:nth-child(4) {
+					--column: 7;
+				}
+
+				&:nth-child(5) {
+					--column: 9;
+				}
+
+				&:nth-child(6) {
+					--column: 11;
+				}
+
+				&:nth-child(7) {
+					--column: 13;
+				}
+
+				&:nth-child(8) {
+					--column: 15;
+				}
+
+				&:nth-child(9) {
+					--column: 17;
+				}
+
+				&:nth-child(10) {
+					--column: 19;
+				}
+			}
+			
+		}
+	}
+}

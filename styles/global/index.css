@@ -2,6 +2,7 @@
 @import './fonts.css';
 @import './typo.css';
 @import './forms.css';
+@import './layout.css';
 
 *,
 *:before,
@@ -13,7 +14,7 @@
 }
 
 *:focus {
-	outline: 3px solid var(--yellow);
+	outline: 3px solid var(--purple_bright);
 }
 
 body,
@@ -27,6 +28,7 @@ body {
 	top: 0;
 	width: 100vw;
 	margin: 0;
+	background: var(--background);
 }
 
 .sr-only {

@@ -1,0 +1,53 @@
+body {
+	@media(prefers-color-scheme: light) {
+		--purple_bright: #84398F;
+		--purple: #5B45AF;
+		--blue: #1976D4;
+		--green: #437E45;
+		--red: #AD1728;
+		--pink: #A0276C;
+		--orange: #BB5C04;
+		--yellow: #8C7506;
+		--background: #f7f0eb;
+		--neutral: #0d0d0d;
+	} 
+	
+	@media(prefers-color-scheme: dark) {
+		--purple_bright: #CE76DB;
+		--purple: #9B8ADC;
+		--navy: #7294FA;
+		--blue: #4A9AEA;
+		--red: #FF697C;
+		--pink: #D976AF;
+		--background: #0d0d0d;
+		--neutral: #f7f0eb;
+	}
+
+	&:has(.theme_toggle input[type="radio"][value="light"]:checked) {
+		&, *::before, &::after {
+			--purple_bright: #84398F;
+			--purple: #5B45AF;
+			--blue: #1976D4;
+			--green: #437E45;
+			--red: #AD1728;
+			--pink: #A0276C;
+			--orange: #BB5C04;
+			--yellow: #8C7506;
+			--background: #f7f0eb;
+			--neutral: #0d0d0d;
+		}
+	}
+
+	&:has(.theme_toggle input[type="radio"][value="dark"]:checked) {
+		&, *::before, &::after {
+			--purple_bright: #CE76DB;
+			--purple: #9B8ADC;
+			--navy: #7294FA;
+			--blue: #4A9AEA;
+			--red: #FF697C;
+			--pink: #D976AF;
+			--background: #0d0d0d;
+			--neutral: #f7f0eb;
+		}
+	}
+}

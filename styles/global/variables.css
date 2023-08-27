@@ -10,7 +10,7 @@ body, *::before, *::after {
 	--orange: #f78d2b;
 	--yellow: #ffce03;
 	--white: #ffffff;
-	--black: #000000;
+	--black: #0d0d0d;
 	--neutral: var(--black);
 	--font_main: Montserrat, sans-serif;
 	--font_code: 'Source Code Pro', monospace;
@@ -29,18 +29,10 @@ body, *::before, *::after {
 	--filter_white: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(346deg) brightness(101%) contrast(104%);
 	--filter_black: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(22deg) brightness(103%) contrast(103%);
 	--filter_neutral: var(--filter_black);
+	--filter_logo: none;
 
 
 	@media(prefers-color-scheme: light) {
-		--purple_bright: #84398F;
-		--purple: #5B45AF;
-		--blue: #1976D4;
-		--green: #437E45;
-		--red: #AD1728;
-		--pink: #A0276C;
-		--orange: #BB5C04;
-		--yellow: #8C7506;
-
 		--filter_purple_bright: brightness(0) saturate(100%) invert(28%) sepia(71%) saturate(663%) hue-rotate(248deg) brightness(91%) contrast(95%);
 		--filter_purple: brightness(0) saturate(100%) invert(32%) sepia(14%) saturate(4114%) hue-rotate(221deg) brightness(91%) contrast(96%);
 		--filter_blue: brightness(0) saturate(100%) invert(31%) sepia(79%) saturate(2783%) hue-rotate(197deg) brightness(93%) contrast(81%);
@@ -49,21 +41,44 @@ body, *::before, *::after {
 		--filter_pink: brightness(0) saturate(100%) invert(22%) sepia(37%) saturate(3262%) hue-rotate(297deg) brightness(94%) contrast(95%);
 		--filter_orange: brightness(0) saturate(100%) invert(39%) sepia(43%) saturate(1501%) hue-rotate(358deg) brightness(94%) contrast(100%);
 		--filter_yellow: brightness(0) saturate(100%) invert(41%) sepia(89%) saturate(3879%) hue-rotate(42deg) brightness(97%) contrast(95%);
-	}
-
+		--filter_neutral: var(--filter_black);
+	} 
+	
 	@media(prefers-color-scheme: dark) {
-		--purple_bright: #CE76DB;
-		--purple: #9B8ADC;
-		--navy: #7294FA;
-		--blue: #4A9AEA;
-		--red: #FF697C;
-		--pink: #D976AF;
-
 		--filter_purple_bright: brightness(0) saturate(100%) invert(61%) sepia(50%) saturate(1007%) hue-rotate(228deg) brightness(89%) contrast(91%);
 		--filter_purple: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(4709%) hue-rotate(206deg) brightness(92%) contrast(85%);
 		--filter_navy: brightness(0) saturate(100%) invert(60%) sepia(84%) saturate(3082%) hue-rotate(203deg) brightness(104%) contrast(96%);
 		--filter_blue: brightness(0) saturate(100%) invert(65%) sepia(73%) saturate(3581%) hue-rotate(187deg) brightness(96%) contrast(91%);
 		--filter_red: brightness(0) saturate(100%) invert(51%) sepia(77%) saturate(996%) hue-rotate(313deg) brightness(102%) contrast(101%);
 		--filter_pink: brightness(0) saturate(100%) invert(83%) sepia(16%) saturate(5958%) hue-rotate(285deg) brightness(89%) contrast(91%);
+		--filter_neutral: var(--filter_white);
+	}
+
+	&:has(.theme_toggle input[type="radio"][value="light"]:checked) {
+		&, *::before, &::after {
+			--filter_purple_bright: brightness(0) saturate(100%) invert(28%) sepia(71%) saturate(663%) hue-rotate(248deg) brightness(91%) contrast(95%);
+			--filter_purple: brightness(0) saturate(100%) invert(32%) sepia(14%) saturate(4114%) hue-rotate(221deg) brightness(91%) contrast(96%);
+			--filter_blue: brightness(0) saturate(100%) invert(31%) sepia(79%) saturate(2783%) hue-rotate(197deg) brightness(93%) contrast(81%);
+			--filter_green: brightness(0) saturate(100%) invert(43%) sepia(12%) saturate(1694%) hue-rotate(72deg) brightness(96%) contrast(87%);
+			--filter_red: brightness(0) saturate(100%) invert(11%) sepia(95%) saturate(4327%) hue-rotate(346deg) brightness(90%) contrast(90%);
+			--filter_pink: brightness(0) saturate(100%) invert(22%) sepia(37%) saturate(3262%) hue-rotate(297deg) brightness(94%) contrast(95%);
+			--filter_orange: brightness(0) saturate(100%) invert(39%) sepia(43%) saturate(1501%) hue-rotate(358deg) brightness(94%) contrast(100%);
+			--filter_yellow: brightness(0) saturate(100%) invert(41%) sepia(89%) saturate(3879%) hue-rotate(42deg) brightness(97%) contrast(95%);
+			--filter_neutral: var(--filter_black);
+			
+		}
+	}
+
+	&:has(.theme_toggle input[type="radio"][value="dark"]:checked) {
+		&, *::before, &::after {
+			--filter_purple_bright: brightness(0) saturate(100%) invert(61%) sepia(50%) saturate(1007%) hue-rotate(228deg) brightness(89%) contrast(91%);
+			--filter_purple: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(4709%) hue-rotate(206deg) brightness(92%) contrast(85%);
+			--filter_navy: brightness(0) saturate(100%) invert(60%) sepia(84%) saturate(3082%) hue-rotate(203deg) brightness(104%) contrast(96%);
+			--filter_blue: brightness(0) saturate(100%) invert(65%) sepia(73%) saturate(3581%) hue-rotate(187deg) brightness(96%) contrast(91%);
+			--filter_red: brightness(0) saturate(100%) invert(51%) sepia(77%) saturate(996%) hue-rotate(313deg) brightness(102%) contrast(101%);
+			--filter_pink: brightness(0) saturate(100%) invert(83%) sepia(16%) saturate(5958%) hue-rotate(285deg) brightness(89%) contrast(91%);
+			--filter_neutral: var(--filter_white);
+			--filter_logo: var(--filter_neutral);
+		}
 	}
 }

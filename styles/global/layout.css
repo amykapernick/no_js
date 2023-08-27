@@ -1,0 +1,26 @@
+body {
+	height: 100vh;
+	max-height: 100vh;
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+
+	&:not(:has(section:target)) {
+		& section:first-of-type {
+			display: block;
+		}
+	}
+}
+
+main {
+	overflow-y: auto;
+	overflow-x: visible;
+}
+
+section {
+	display: none;
+
+	&:target {
+		display: block;
+	}
+}

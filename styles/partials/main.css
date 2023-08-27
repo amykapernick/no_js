@@ -1,0 +1,35 @@
+main {
+	padding: 20px;
+}
+
+section {
+	height: 100%;
+	padding: 1px 0;
+
+	& > h2:first-child {
+		margin-top: 0;
+	}
+}
+
+@media(min-width: 40em) {
+	main {
+		padding: 30px;
+	}
+}
+
+@media(min-width: 60em) {
+	main {
+		padding: 50px 5vw;
+	}
+}
+
+@media(min-width: 80em) {
+	main {
+		padding: 50px 0;
+	}
+
+	section {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+}

@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <link rel="shortcut icon" href="img/amy_small.png">
-    <meta name="theme-color" content="#9440a0">
+    <link rel="shortcut icon" href="img/no-js.ico">
+    <meta name="theme-color" content="#64ad66">
 
     <title>No JS</title>
 
@@ -15,317 +15,141 @@
 </head>
 
 <body>
-
-    <!-- <header>
-        <embed src="partials/header.html" type="text/html" />
-    </header> -->
-
+    <header>
+        <img src="img/no-js.svg" class="logo" alt="No JS" />
+        <h1>This website does not need JavaScript</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#testimonials">Testimonials</a>
+                </li>
+                <li>
+                    <a href="#faqs">FAQs</a>
+                </li>
+                <li>
+                    <a href="#toggle">Toggle</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+                <li>
+                    <a href="#carousel">Carousels</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <section>
-            <div>
+        <section id="home">
+            <h2 class="sr-only">Intro</h2>
+            <p>When we build a website these days, there's a 110% chance that it's got some form of JavaScript on it. Whether it's a full framework, for animations, to trigger a popup or as a tracking script, JavaScript is all around us.</p>
+            <p>But what if I told you that you didn't have to use JavaScript at all? Not even as a build process? Thanks to updates in browser technologies, there's now a plethora of native browser features that allow building modern, functional websites, sans JavaScript.</p>
+            <p>So together, we'll build out a <strong>completely</strong> static website, a collection of HTML and CSS files, no tracking, no scripting, no servers, no third-party resources. Let's build a website the way we used to (but no marquees).</p>
+        </section>
+        <section id="testimonials">
+            <h2>Why JS is the worst!</h2>
+            <div class="testimonials">
+                <input type="radio" id="testimonial_1" name="testimonials" />
+                <label for="testimonial_1">Testimonial 1</label>
                 <blockquote>
-                    <p>Hi, I'm Amy 👋</p>
-
-                    <div class="options">
-                        <p>I'm a</p>
-                        <ul class="options">
-                            <li>Front End Developer</li>
-                            <li>Speaker</li>
-                            <li>Dog Lover</li>
-                            <li>MVP</li>
-                            <li>Writer</li>
-                            <li class="an">Organiser</li>
-                            <li>Mentor</li>
-                            <li>Champion</li>
-                            <li class="an">Advocate</li>
-                            <li>Conference Addict</li>
-                        </ul>
-                    </div>
+                    <p>JavaScript is the worst!</p>
+                    <cite>Everyone</cite>
                 </blockquote>
-                <embed src="graphics/blob.html" type="text/html" />
-
+                <input type="radio" id="testimonial_2" name="testimonials" />
+                <label for="testimonial_2">Testimonial 2</label>
+                <blockquote>
+                    <p>HTML and CSS are far superior programming languages</p>
+                    <cite>Amy</cite>
+                </blockquote>
             </div>
         </section>
-
-        <section>
-            <div class="content ">
-
-                <p>I help businesses get online, and stay online.</p>
-                <p>
-                    At AimHigher we build modern & professional websites purpose
-                    made to be easily maintained by anyone, regardless of technical
-                    skill.
-                </p>
-
-
-                <ul class="icons  ">
-                    <li>
-                        <a href="https://aimhigherweb.design" target="_blank" rel="nofollow">
-
-                            <span>AimHigher Web</span>
-                        </a>
-                    </li>
+        <section id="faqs" class="faqs">
+            <h2>Still not convinced?</h2>
+            <details>
+                <summary>Why is HTML better than JS?</summary>
+                <p>HTML functionality is built into browsers so most of the time if you can do something with HTML rather than loading in a bunch of JavaScript, you should.</p>
+                <p>Most HTML has much better browser support than JavaScript as well, and it's much easier to debug when something goes wrong.</p>
+            </details>
+            <details>
+                <summary>Why is CSS better than JS?</summary>
+                <p>CSS is built for styling and animation of our content and is much lighter-weight to use for dressing up our content than JavaScript. It can be parsed and rendered in our browsers much faster and when something goes wrong it fails more gracefully than JS which tends to break our entire page.</p>
+            </details>
+            <details>
+                <summary>Why does JS suck so much?</summary>
+                <ul>
+                    <li><strong>Performance Variability:</strong> JavaScript execution performance can vary widely across different browsers and devices. This can lead to inconsistent user experiences and require developers to optimize their code for various environments.</li>
+                    <li><strong>Security Concerns:</strong> Because JavaScript runs in the browser, it's exposed to potential security vulnerabilities like cross-site scripting (XSS) attacks. Developers need to be vigilant about input validation and escaping to prevent these types of security breaches.</li>
+                    <li><strong>Limited Debugging Tools:</strong> While modern browsers have improved their debugging tools, debugging complex JavaScript applications can still be challenging. Debugging errors in asynchronous code, for example, can be time-consuming and require specialized tools.</li>
+                    <li><strong>DOM Manipulation Complexity:</strong> Manipulating the Document Object Model (DOM) using JavaScript can be error-prone and lead to performance issues. Frequent DOM updates can slow down the rendering of a web page, impacting the user experience.</li>
+                    <li><strong>Dependency Management:</strong> Managing dependencies in JavaScript projects can become unwieldy due to the wide variety of libraries and frameworks available. This can lead to issues with compatibility, version conflicts, and increased project complexity.</li>
                 </ul>
-            </div>
+            </details>
         </section>
-
-
-
-        <section class=" ">
-
-            <div class="content ">
-
-                <p>
-                    I <a href="/talks">speak at conferences</a> about front end development,
-                    the web, mental health and life.
-                </p>
-                <p>
-                    I also run in person and online <a href="/workshops">workshops</a> for a more in-depth focus on front end tech, both internally and
-                    alongside other events.
-                </p>
-
-
-
-                <ul class="icons  ">
-                    <li>
-                        <a target="_self" rel="">
-
-
-                            <span></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-
-
-        <section class=" ">
-
-            <div class="content ">
-
-                <p>
-                    I mentor at events, helping more girls and women get involved in
-                    tech. This includes She Codes (formerly Perth Web Girls) and
-                    Muses Code JS (formerly NodeGirls).
-                </p>
-
-
-
-                <ul class="icons  ">
-                    <li>
-                        <a href="https://techoutsiders.com.au/amy-kapernick/" target="_blank" rel="nofollow">
-
-                            <span>Tech Outsiders</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://musescodejs.org/perth.html" target="_blank" rel="nofollow">
-
-
-                            <span>Muses Code JS</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://shecodes.com.au/" target="_blank" rel="nofollow">
-
-                            <span>She Codes</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <div class="section ">
-
-
-            <section class=" ">
-
-                <div class="content ">
-
-                    <p>
-                        I write blog posts. Sometimes I blog about tech, sometimes
-                        about the web, sometimes about life.
-                    </p>
-
-
-
-                    <ul class="icons  ">
-                        <li>
-                            <a href="https://blog.amyskapers.dev" target="_blank" rel="nofollow">
-
-                                <span>Amy&#39;s Kapers</span>
-                            </a>
-                        </li>
-                    </ul>
+        <section id="toggle">
+            <h2>Flick the Switch</h2>
+            <fieldset>
+                <div class="toggle">
+                    <input id="off" type="radio" class="sr-only" name="switch" value="off" checked />
+                    <label for="off">
+                        Off
+                    </label>
+                    <input id="on" type="radio" class="sr-only" name="switch" value="on" />
+                    <label for="on">
+                        On
+                    </label>
+                    <span class="switch" aria-hidden="true"></span>
                 </div>
-            </section>
-
-
-
-            <section class=" ">
-
-                <div class="content ">
-
-                    <p>
-                        I'm a Microsoft MVP. This means I do a lot of work in my
-                        community and sharing what I've learnt in conference talks
-                        and blog posts.
-                    </p>
-
-
-
-                    <ul class="icons  ">
-                        <li>
-                            <a href="https://mvp.microsoft.com/en-us/publicprofile/5003595" target="_blank" rel="nofollow">
-
-                                <span>Microsoft MVP Profile</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-
-
-            <section class=" ">
-
-                <div class="content ">
-
-                    <p>
-                        I'm a Twilio Champion. This means I help Twilio to build
-                        better communities.
-                    </p>
-
-
-
-                    <ul class="icons  ">
-                        <li>
-                            <a href="https://www.twilio.com/champions" target="_blank" rel="nofollow">
-
-                                <span>Twilio Champions</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-        </div>
-
-
-
-        <section class=" ">
-
-            <div class="content ">
-
-                <p>
-                    Sometimes I write interesting things on socials, but mostly it's
-                    just pictures of my dog.
-                </p>
-
-
-
-                <ul class="icons  ">
-                    <li>
-                        <a href="https://twitter.com/amys_kapers" target="_blank" rel="nofollow me">
-
-                            <span>Twitter</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/amys_kapers/" target="_blank" rel="nofollow me">
-
-                            <span>Instagram</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/amykapernick/" target="_blank" rel="nofollow me">
-
-                            <span>LinkedIn</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/amykapernick" target="_blank" rel="nofollow me">
-
-                            <span>GitHub</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://codepen.io/amys_kapers" target="_blank" rel="nofollow me">
-
-                            <span>CodePen</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://hachyderm.io/@amys_kapers" target="_blank" rel="nofollow">
-
-                            <span>Mastadon</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            </fieldset>
         </section>
+        <section id="contact">
+            <h2>Submit Feedback</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="date">When did you first learn JS?</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="js_rating">How much do you know JavaScript?</label>
+                <input type="range" id="js_rating" name="js" min="0" max="10" step="1" list="js_skills">
+                <datalist id="js_skills">
+                    <option value="0">Never used it before</option>
+                    <option value="2">Used it once or twice</option>
+                    <option value="4">Can follow a tutorial</option>
+                    <option value="6">Fine as long as it works</option>
+                    <option value="8">Use it regularly</option>
+                    <option value="10">I use JS for everything</option>
+                </datalist>
 
 
+                <button type="submit">Submit</button>
+            </form>
 
-        <section class=" ">
-
-            <div class="content ">
-
-                <p>
-                    I'm on the committee for DDD Perth as Vice-Chair and Director of
-                    Conference Content. We're the biggest tech conference in
-                    Australia, not-for-profit and entirely volunteer run.
-                </p>
-                <p>
-                    In this role, I plan and run workshops for writing talk
-                    proposals, help build out the final agenda, mentor and run
-                    training for any speakers that need an extra hand or want
-                    feedback on their presentations before the big day.
-                </p>
-
-
-
-                <ul class="icons  ">
-                    <li>
-                        <a href="https://dddperth.com/" target="_blank" rel="nofollow">
-
-                            <span>DDD Perth</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </section>
-
-
-        <section class="special  ">
-
-            <div class="content ">
-
-                <div class="graphic ">
-
-
-                </div>
-                <p>
-                    I have a grey and white border collie who likes long walks on the
-                    beach and snuggling on the couch.
-                </p>
-
-
-            </div>
-        </section>
-
-
     </main>
 
 
 
     <footer>
-
-        <p>
-            Designed by <a href="https://www.instagram.com/fernanddandy" target="_blank" rel="nofollow">Fern and Dandy</a>, built by <a href="/">Amy</a>.
-        </p>
-
+        <p>&copy; 2023 <a href="https://amyskapers.dev" target="_blank" rel="nofollow">Amy's Kapers</a></p>
+        <p>This site has no JavaScript whatsoever. Don't believe me? <a href="https://www.makeuseof.com/how-to-disable-javascript-in-web-browsers/" target="_blank">Try it yourself!</a></p>
+        <fieldset class="theme_toggle">
+            <div class="toggle">
+                <input id="light" type="radio" class="sr-only" name="theme" value="light" checked />
+                <label for="light">
+                    🌞
+                    <span class="sr-only">Light</span>
+                </label>
+                <input id="dark" type="radio" class="sr-only" name="theme" value="dark" />
+                <label for="dark">
+                    🌒
+                    <span class="sr-only">Dark</span>
+                </label>
+                <span class="switch" aria-hidden="true"></span>
+            </div>
+        </fieldset>
     </footer>
 
 </body>

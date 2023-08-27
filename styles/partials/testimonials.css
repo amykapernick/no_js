@@ -1,0 +1,53 @@
+.testimonials {
+	margin: 0 auto;
+
+	& blockquote {
+		font-size: 2em;
+		padding: 1.5em 1em 1em;
+		position: relative;
+
+		&::before {
+			color: var(--green);
+			content: "❝";
+			font-size: 5em;
+			line-height: 1;
+			position: absolute;
+			top: -50px;
+			left: -20px;
+			z-index: -1;
+		}
+
+		&::after {
+			background: var(--green);
+			content: "";
+			opacity: 0.1;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -2;
+		}
+	}
+
+	& p {
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	& cite {
+		display: block;
+		font-size: 0.9em;
+		margin-top: 5px;
+		text-align: right;
+	}
+
+	
+}
+
+
