@@ -112,6 +112,9 @@
                 <label for="date">When did you first learn JS?</label>
                 <input type="date" id="date" name="date" required>
 
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+
                 <label for="js_rating">How much do you know JavaScript?</label>
                 <input type="range" id="js_rating" name="js" min="0" max="10" step="1" list="js_skills">
                 <datalist id="js_skills">
@@ -122,19 +125,50 @@
                     <option value="8">Use it regularly</option>
                     <option value="10">I use JS for everything</option>
                 </datalist>
-
-
                 <button type="submit">Submit</button>
             </form>
+        </section>
+        <section id="carousel">
+            <h2>Image Carousels</h2>
+            <div class="carousel">
+                <input type="radio" name="images" value="image_1" id="img_1" class="sr-only" checked />
+                <label for="img_1">Image 1</label>
+                <div class="image">
+                    <img src="img/image_1" alt="" />
+                </div>
 
+                <input type="radio" name="images" value="image_2" id="img_2" class="sr-only" />
+                <label for="img_2">Image 2</label>
+                <div class="image">
+                    <img src="img/image_2" alt="" />
+                </div>
+
+                <input type="radio" name="images" value="image_3" id="img_3" class="sr-only" />
+                <label for="img_3">Image 3</label>
+                <div class="image">
+                    <img src="img/image_3" alt="" />
+                </div>
+
+                <input type="radio" name="images" value="image_4" id="img_4" class="sr-only" />
+                <label for="img_4">Image 4</label>
+                <div class="image">
+                    <img src="img/image_4" alt="" />
+                </div>
+
+                <input type="radio" name="images" value="image_5" id="img_5" class="sr-only" />
+                <label for="img_5">Image 5</label>
+                <div class="image">
+                    <img src="img/image_5" alt="" />
+                </div>
+            </div>
         </section>
     </main>
 
 
 
     <footer>
-        <p>&copy; 2023 <a href="https://amyskapers.dev" target="_blank" rel="nofollow">Amy's Kapers</a></p>
-        <p>This site has no JavaScript whatsoever. Don't believe me? <a href="https://www.makeuseof.com/how-to-disable-javascript-in-web-browsers/" target="_blank">Try it yourself!</a></p>
+        <p>&copy; 2023 <a href="https://amyskapers.dev" target="_blank" rel="nofollow noopener">Amy's Kapers</a></p>
+        <p>This site has no JavaScript whatsoever. Don't believe me? <a href="https://www.makeuseof.com/how-to-disable-javascript-in-web-browsers/" rel="nofollow noopener" target="_blank">Try it yourself!</a></p>
         <fieldset class="theme_toggle">
             <div class="toggle">
                 <input id="light" type="radio" class="sr-only" name="theme" value="light" checked />
