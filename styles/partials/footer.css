@@ -1,6 +1,6 @@
 footer {
 	text-align: center;
-	padding: 20px;
+	padding: 30px;
 	font-size: 0.9;
 	z-index: 2;
 	position: relative;
@@ -32,19 +32,24 @@ footer {
 .theme_toggle {
 	position: absolute;
 	right: 20px;
-	bottom: 20px;
+	bottom: 10px;
 	width: auto;
 }
 
 @media(min-width: 40em) {
 	footer {
-		padding: 30px;
+		padding: 30px 30px 40px;
 	}
 }
 
 @media(min-width: 60em) {
 	footer {
 		padding: 30px 5vw;
+	}
+
+	.theme_toggle {
+		right: 0;
+		bottom: 20px;
 	}
 }
 
@@ -53,5 +58,9 @@ footer {
 		padding: 30px 0;
 		max-width: 1000px;
 		margin: 0 auto;
+	}
+
+	.theme_toggle {
+		right: -200px;
 	}
 }

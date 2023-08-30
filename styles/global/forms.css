@@ -55,11 +55,8 @@ input, textarea, select {
 
 	&:invalid {
 		box-shadow: none;
-
-		&:focus {
-			border-color: var(--red);
-			outline-color: var(--red);
-		}
+		border-color: var(--red);
+		outline-color: var(--red);
 	}
 
 	&:valid {

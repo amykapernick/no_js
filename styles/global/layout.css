@@ -17,10 +17,3 @@ main {
 	overflow-x: visible;
 }
 
-section {
-	display: none;
-
-	&:target {
-		display: block;
-	}
-}
