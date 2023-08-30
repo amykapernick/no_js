@@ -16,11 +16,3 @@ main {
 	overflow-y: auto;
 	overflow-x: visible;
 }
-
-section {
-	display: none;
-
-	&:target {
-		display: block;
-	}
-}
