@@ -1,0 +1,60 @@
+form {
+	&:has(input[type="range"] + datalist option:nth-child(1)) {
+		--opts: 1;
+	}
+
+	&:has(input[type="range"] + datalist option:nth-child(2)) {
+		--opts: 2;
+	}
+
+	&:has(input[type="range"] + datalist option:nth-child(3)) {
+		--opts: 3;
+	}
+
+	&:has(input[type="range"] + datalist option:nth-child(4)) {
+		--opts: 4;
+	}
+
+	&:has(input[type="range"] + datalist option:nth-child(5)) {
+		--opts: 5;
+	}
+
+	&:has(input[type="range"] + datalist option:nth-child(6)) {
+		--opts: 6;
+	}
+
+	&:has(input[type="range"] + datalist option:nth-child(7)) {
+		--opts: 7;
+	}
+
+	&:has(input[type="range"] + datalist option:nth-child(8)) {
+		--opts: 8;
+	}
+
+	&:has(input[type="range"] + datalist option:nth-child(9)) {
+		--opts: 9;
+	}
+
+	&:has(input[type="range"] + datalist option:nth-child(10)) {
+		--opts: 10;
+	}
+
+
+	& input[type="range"] {
+		width: calc(100% - (100% / var(--opts)));
+
+		& + datalist {
+			display: grid;
+			grid-template-columns: 50px repeat(var(--opts),1fr 2em);
+
+			& option {
+				grid-column-end: span 3;
+				grid-column-start: var(--column);
+
+				&:nth-child(2n) {
+					grid-row-start: 2;
+				}
+			}
+		}
+	}
+}

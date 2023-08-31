@@ -1,0 +1,102 @@
+.testimonials {
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-template-columns: 1fr repeat(var(--num_test), auto) 1fr;
+	justify-content: center;
+
+	&:has(blockquote:nth-of-type(1)) {
+		--num_test: 1;
+	}
+
+	&:has(blockquote:nth-of-type(2)) {
+		--num_test: 2;
+	}
+
+	&:has(blockquote:nth-of-type(3)) {
+		--num_test: 3;
+	}
+
+	&:has(blockquote:nth-of-type(4)) {
+		--num_test: 4;
+	}
+
+	&:has(blockquote:nth-of-type(5)) {
+		--num_test: 5;
+	}
+
+	&::before {
+		content: '';
+		grid-row: 2;
+		grid-column-start: 1;
+	}
+
+	& input {
+		&[type="radio"] {
+			display: none;
+	
+			&:checked {
+				& + label {
+					& + blockquote {
+						opacity: 1;
+						pointer-events: auto;
+					}
+	
+					&::after {
+						content: "";
+					}
+				}
+			}
+		}
+	}
+
+	& blockquote {
+		pointer-events: none;
+		opacity: 0;
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+	}
+
+	& label {
+		display: flex;
+		align-items: center;
+		color: transparent;
+		font-size: 1px;
+		margin: 5px;
+		order: 2;
+		position: relative;
+		grid-row: 2;
+		cursor: pointer;
+
+		&:before, &:after {
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			border: 2px solid var(--green);
+			display: block;
+			border-radius: 50%;
+		}
+
+		&::before {
+			content: '';
+		}
+
+		&:after {
+			background: radial-gradient(circle,  var(--green) calc(100% - 6px), 
+			transparent calc(100% - 6px));
+			position: absolute;
+		}
+	} 
+
+	&:not(:has(input[type="radio"]:checked)) {
+		& blockquote:first-of-type {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		& label:first-of-type {
+			&::after {
+				content: "";
+			}
+		}
+	}
+}
