@@ -27,6 +27,11 @@ footer {
 			margin-bottom: 0;
 		}
 	}
+
+	& img {
+		height: 1.2em;
+		filter: var(--filter_purple);
+	}
 }
 
 .theme_toggle {
